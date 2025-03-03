@@ -17,7 +17,7 @@
                 <a href="{{ route('index') }}" class="text-[#248232] hover:text-[#2D3319] transition-colors">
                     Beranda
                 </a>
-                <a href="" class="text-[#248232] hover:text-[#2D3319] transition-colors">
+                <a href="/struktur" class="text-[#248232] hover:text-[#2D3319] transition-colors">
                     Struktur
                 </a>
                 <a href="" class="text-[#248232] hover:text-[#2D3319] transition-colors">

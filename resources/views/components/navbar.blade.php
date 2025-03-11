@@ -20,7 +20,7 @@
                 <a href="/struktur" class="text-[#248232] hover:text-[#2D3319] transition-colors">
                     Struktur
                 </a>
-                <a href="" class="text-[#248232] hover:text-[#2D3319] transition-colors">
+                <a href="/divisi" class="text-[#248232] hover:text-[#2D3319] transition-colors">
                     Divisi
                 </a>
                 <!-- Dropdown Kegiatan -->

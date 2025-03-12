@@ -9,9 +9,6 @@
             
             <!-- Content -->
             <div class="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
-                <div class="bg-red-600 text-white px-4 py-1 rounded-full text-sm mb-4">
-                    Program Studi S1
-                </div>
                 <h1 class="text-4xl md:text-6xl font-bold text-center mb-2">
                     HMTIF - Universitas Pasundan
                 </h1>
@@ -129,26 +126,25 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Akreditasi -->
                     <div class="pr-4 border-r border-gray-300">
-                        <h3 class="text-4xl font-bold text-[#248232] mb-2">Akreditasi<br>Baik</h3>
+                        <h3 class="text-4xl font-bold text-[#248232] mb-2">0</h3>
                         <p class="text-gray-600">
-                            Terakreditasi <span class="font-bold">Baik</span> oleh BAN-PT dengan <br>
-                            nomor <span class="text-[#248232]">10321/SK/BAN-PT/Akred/S/VIII/2021</span>
+                            Kegiatan HMTIF <br> Periode Kabinet Harmoni
                         </p>
                     </div>
 
                     <!-- Jumlah Mahasiswa -->
                     <div class="px-4 border-r border-gray-300">
-                        <h3 class="text-4xl font-bold text-[#248232] mb-2">16</h3>
+                        <h3 class="text-4xl font-bold text-[#248232] mb-2">0</h3>
                         <p class="text-gray-600">
-                            Program Kerja <br> periode Kabinet Harmoni
+                            Program Kerja HMTIF<br> Periode Kabinet Harmoni
                         </p>
                     </div>
 
                     <!-- Publikasi -->
                     <div class="pl-4">
-                        <h3 class="text-4xl font-bold text-[#248232] mb-2">80</h3>
+                        <h3 class="text-4xl font-bold text-[#248232] mb-2">0</h3>
                         <p class="text-gray-600">
-                            Anggota periode <br> Kabinet Harmoni
+                            Anggota HMTIF <br> Periode Kabinet Harmoni
                         </p>
                     </div>
                 </div>
@@ -202,7 +198,7 @@
                     <div>
                         <h2 class="text-4xl font-bold text-gray-900">Kegiatan <span class="text-[#248232]">HMTIF</span></h2>
                     </div>
-                    <a href="#" class="text-[#248232] hover:text-grey-900 flex items-center">
+                    <a href="{{ route('proker') }}" class="text-[#248232] hover:text-grey-900 flex items-center">
                         Lihat Selengkapnya
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -239,7 +235,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                     </svg>
-                                    <span class="text-red-800 font-medium">Bagus Cahyo</span>
+                                    <span class="text-[#248232] font-medium">Bagus Cahyo</span>
                                 </div>
                             </div>
                             
@@ -250,7 +246,142 @@
                             
                             <!-- Read More link -->
                             <div class="mt-2">
-                                <a href="#" class="text-red-800 text-sm font-medium flex items-center hover:underline">
+                                <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white rounded shadow overflow-hidden flex">
+                        <!-- Left side image container with padding -->
+                        <div class="w-1/3 p-3 pt-3 pl-3 pb-3">
+                            <div class="h-full w-full overflow-hidden">
+                                <img src="{{ asset('images/BPH-Kahim.png') }}" alt="News image" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        
+                        <!-- Right side content -->
+                        <div class="w-2/3 p-5">
+                            <!-- Date and author info -->
+                            <div class="flex items-center text-sm text-gray-600 mb-3">
+                                <div class="flex items-center mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>October 9, 2023</span>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                    <span class="text-[#248232] font-medium">Bagus Cahyo</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Title -->
+                            <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight">
+                                Rancangan UI/UX Aplikasi Smart IT MarineWise Ciptaan Mahasiswa Sistem Informasi ITTS Berhasil Meraih Juara
+                            </h3>
+                            
+                            <!-- Read More link -->
+                            <div class="mt-2">
+                                <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white rounded shadow overflow-hidden flex">
+                        <!-- Left side image container with padding -->
+                        <div class="w-1/3 p-3 pt-3 pl-3 pb-3">
+                            <div class="h-full w-full overflow-hidden">
+                                <img src="{{ asset('images/BPH-Kahim.png') }}" alt="News image" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        
+                        <!-- Right side content -->
+                        <div class="w-2/3 p-5">
+                            <!-- Date and author info -->
+                            <div class="flex items-center text-sm text-gray-600 mb-3">
+                                <div class="flex items-center mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>October 9, 2023</span>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                    <span class="text-[#248232] font-medium">Bagus Cahyo</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Title -->
+                            <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight">
+                                Rancangan UI/UX Aplikasi Smart IT MarineWise Ciptaan Mahasiswa Sistem Informasi ITTS Berhasil Meraih Juara
+                            </h3>
+                            
+                            <!-- Read More link -->
+                            <div class="mt-2">
+                                <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white rounded shadow overflow-hidden flex">
+                        <!-- Left side image container with padding -->
+                        <div class="w-1/3 p-3 pt-3 pl-3 pb-3">
+                            <div class="h-full w-full overflow-hidden">
+                                <img src="{{ asset('images/BPH-Kahim.png') }}" alt="News image" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        
+                        <!-- Right side content -->
+                        <div class="w-2/3 p-5">
+                            <!-- Date and author info -->
+                            <div class="flex items-center text-sm text-gray-600 mb-3">
+                                <div class="flex items-center mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>October 9, 2023</span>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                    <span class="text-[#248232] font-medium">Bagus Cahyo</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Title -->
+                            <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight">
+                                Rancangan UI/UX Aplikasi Smart IT MarineWise Ciptaan Mahasiswa Sistem Informasi ITTS Berhasil Meraih Juara
+                            </h3>
+                            
+                            <!-- Read More link -->
+                            <div class="mt-2">
+                                <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
                                     Read More
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -261,142 +392,7 @@
                     </div>
                     
 
-                    <!-- News Card UI Component - With Image Spacing -->
-                    <div class="bg-white rounded shadow overflow-hidden flex">
-                        <!-- Left side image container with padding -->
-                        <div class="w-1/3 p-3 pt-3 pl-3 pb-3">
-                            <div class="h-full w-full overflow-hidden">
-                                <img src="{{ asset('images/BPH-Kahim.png') }}" alt="News image" class="h-full w-full object-cover">
-                            </div>
-                        </div>
-                        
-                        <!-- Right side content -->
-                        <div class="w-2/3 p-5">
-                            <!-- Date and author info -->
-                            <div class="flex items-center text-sm text-gray-600 mb-3">
-                                <div class="flex items-center mr-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span>October 9, 2023</span>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                    <span class="text-red-800 font-medium">Bagus Cahyo</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Title -->
-                            <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight">
-                                Rancangan UI/UX Aplikasi Smart IT MarineWise Ciptaan Mahasiswa Sistem Informasi ITTS Berhasil Meraih Juara
-                            </h3>
-                            
-                            <!-- Read More link -->
-                            <div class="mt-2">
-                                <a href="#" class="text-red-800 text-sm font-medium flex items-center hover:underline">
-                                    Read More
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- News Card UI Component - With Image Spacing -->
-                    <div class="bg-white rounded shadow overflow-hidden flex">
-                        <!-- Left side image container with padding -->
-                        <div class="w-1/3 p-3 pt-3 pl-3 pb-3">
-                            <div class="h-full w-full overflow-hidden">
-                                <img src="{{ asset('images/BPH-Kahim.png') }}" alt="News image" class="h-full w-full object-cover">
-                            </div>
-                        </div>
-                        
-                        <!-- Right side content -->
-                        <div class="w-2/3 p-5">
-                            <!-- Date and author info -->
-                            <div class="flex items-center text-sm text-gray-600 mb-3">
-                                <div class="flex items-center mr-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span>October 9, 2023</span>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                    <span class="text-red-800 font-medium">Bagus Cahyo</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Title -->
-                            <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight">
-                                Rancangan UI/UX Aplikasi Smart IT MarineWise Ciptaan Mahasiswa Sistem Informasi ITTS Berhasil Meraih Juara
-                            </h3>
-                            
-                            <!-- Read More link -->
-                            <div class="mt-2">
-                                <a href="#" class="text-red-800 text-sm font-medium flex items-center hover:underline">
-                                    Read More
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- News Card UI Component - With Image Spacing -->
-                    <div class="bg-white rounded shadow overflow-hidden flex">
-                        <!-- Left side image container with padding -->
-                        <div class="w-1/3 p-3 pt-3 pl-3 pb-3">
-                            <div class="h-full w-full overflow-hidden">
-                                <img src="{{ asset('images/BPH-Kahim.png') }}" alt="News image" class="h-full w-full object-cover">
-                            </div>
-                        </div>
-                        
-                        <!-- Right side content -->
-                        <div class="w-2/3 p-5">
-                            <!-- Date and author info -->
-                            <div class="flex items-center text-sm text-gray-600 mb-3">
-                                <div class="flex items-center mr-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span>October 9, 2023</span>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                    <span class="text-red-800 font-medium">Bagus Cahyo</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Title -->
-                            <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight">
-                                Rancangan UI/UX Aplikasi Smart IT MarineWise Ciptaan Mahasiswa Sistem Informasi ITTS Berhasil Meraih Juara
-                            </h3>
-                            
-                            <!-- Read More link -->
-                            <div class="mt-2">
-                                <a href="#" class="text-red-800 text-sm font-medium flex items-center hover:underline">
-                                    Read More
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     
                 
@@ -486,13 +482,13 @@
 
 
 
-         <!-- Section Berita -->
+         <!-- Section Pengumuman -->
          <section class="w-full bg-[#F6F6F6]">
             <!-- Konten di Tengah -->
             <div class="py-12 px-4 md:px-8 max-w-7xl mx-auto">
                 <div class="flex justify-between items-center mb-8">
-                    <h2 class="text-4xl font-bold text-gray-900">Berita <span class="text-[#248232]">HMTIF</span> </h2>
-                    <a href="#" class="text-[#248232] hover:text-gray-600 flex items-center">
+                    <h2 class="text-4xl font-bold text-gray-900">Pengumuman <span class="text-[#248232]">HMTIF</span> </h2>
+                    <a href="{{ route('pengumuman') }}" class="text-[#248232] hover:text-gray-600 flex items-center">
                         Lihat Selengkapnya
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />

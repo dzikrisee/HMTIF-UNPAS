@@ -8,189 +8,284 @@
                     <nav class="text-gray-600 text-left">
                         <a href="/" class="hover:text-gray-800">Home</a> 
                         <span class="mx-2">›</span> 
-                        <span>Kegiatan</span>
-                        <span class="mx-2">›</span> 
-                        <span>Agenda</span>
+                        <span>Kegiatan Agenda</span>
                     </nav>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- Article Header -->
-        <div class="mb-8">
-            <h1 class="text-2xl font-bold text-gray-900 mb-4">Virtual Reality (VR) sebagai Media Pembelajaran Inovatif</h1>
-            
-            <div class="flex items-center text-sm text-gray-600 space-x-4 mb-4">
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <span>By Kifansa Naufal</span>
-                </div>
-                
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <span>November 25, 2024</span>
-                </div>
-                
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
-                    </svg>
-                    <a href="#" class="text-red-800 hover:underline">Berita</a>, 
-                    <a href="#" class="text-red-800 hover:underline">Kegiatan Riset</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Main Content with Sidebar Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row gap-8">
-            <!-- Main Content -->
-            <div class="lg:w-2/3">
-                <!-- Featured Image -->
-                <div class="mb-8">
-                    <img src="{{ asset('images/Kominfo1.jpg') }}" alt="Workshop VR di Telkom University" class="w-full h-80 ">
-                </div>
-                
-                <!-- Article Content -->
-                <div class="prose max-w-none">
-                    <p class="mb-4">
-                        Virtual Reality (VR) adalah teknologi canggih yang memberikan pengalaman menciptakan simulasi dunia virtual yang menyerupai kenyataan. Teknologi ini kini tidak hanya populer di industri hiburan, tetapi juga mulai merambah ke dunia pendidikan. Dengan perangkat VR, siswa dapat belajar melalui simulasi interaktif yang menjembatani teori dan praktik. Perkembangan VR yang semakin pesat membuat teknologi ini menjadi lebih mudah diakses, hal ini memungkinkan institusi pendidikan untuk menghadirkan pembelajaran yang lebih menarik dan efektif. Salah satu contoh penerapan VR dalam pendidikan terlihat dalam pengabdian masyarakat yang dilakukan Telkom University Surabaya yang memperkenalkan modul pembelajaran berbasis VR kepada siswa SMK, menawarkan cara belajar inovatif yang sesuai dengan kebutuhan era digital.
-                    </p>
-                    
-                    <p class="mb-4">
-                        Pada 13 November, Telkom University Surabaya mengikuti kegiatan Inklusi Sosial melalui Literasi Kewirausahaan SMK se-Kota Malang dengan mengangkat Media Pembelajaran Virtual Reality (VR) sebagai teknologi masa depan. Kegiatan ini melibatkan tiga mahasiswa Sistem Informasi bersama dua dosen Sistem Informasi pendamping, Bapak Adzanil Rachmadhi Putra, S.Kom, M.Kom, dan Bapak Purnama Anaking, S.Kom, M.Kom. Persiapan dari kegiatan ini dimulai sejak Agustus 2024 yang mencakup serangkaian kerjasama dengan pertemuan bersama tim ITS untuk merancang modul pembelajaran berbasis VR, mendesain modul, serta mengkonfigurasi perangkat VR wireless.
-                    </p>
-                    
-                    <!-- Image Gallery -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        <img src="{{ asset('images/Kominfo1.jpg') }}" alt="Demonstrasi VR" class="w-full h-auto ">
-                        <img src="{{ asset('images/Kominfo1.jpg') }}" alt="Siswa mencoba VR" class="w-full h-auto ">
+            <!-- Left Column - News Cards -->
+            <div class="w-full lg:w-2/3">
+                <!-- News Card 1 -->
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
+                        <div class="h-full w-full overflow-hidden">
+                            <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
+                        </div>
                     </div>
-                    
-                    <p class="mb-4">
-                        Kegiatan ini berlangsung di Gedung UPT Pelatihan Koperasi dan UKM Provinsi Jawa Timur, Kota Malang. Pada acara ini, modul pembelajaran berbasis VR diperkenalkan secara langsung kepada siswa SMK. Dalam sesi praktik, siswa berkesempatan mencoba perangkat VR untuk menjalankan simulasi berbasis game. Game ini dirancang dengan tujuan atau "goals", seperti menyelesaikan simulasi kewirausahaan secara virtual. Acara ini diharapkan menjadi awal dari pengembangan lebih lanjut dalam penerapan teknologi modern di dunia pendidikan, khususnya bagi siswa SMK yang membutuhkan pengalaman praktis dalam proses pembelajaran mereka.
-                    </p>
-                    
-                    <p class="mb-4">
-                        Kegiatan pengabdian masyarakat yang membawa Virtual Reality (VR) sebagai media pembelajaran ini menunjukkan bagaimana teknologi modern dapat dimanfaatkan dalam dunia pendidikan. Dengan kolaborasi antara Telkom University dan ITS, acara ini menjadi langkah awal dalam membuka peluang pembelajaran berbasis teknologi yang lebih interaktif, dan relevan dengan kebutuhan siswa di era digital. Kehadiran VR di lingkungan pendidikan, seperti yang diperkenalkan kepada siswa SMK di Kota Malang, memberikan harapan besar untuk masa depan pendidikan yang lebih adaptif dan inovatif, sekaligus membekali generasi muda yang kreatif dan siap menghadapi tantangan masa depan.
-                    </p>
-                    
-                    <!-- Tags -->
-                    <div class="mt-8">
-                        <div class="text-sm text-gray-600 mb-2">Tags:</div>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">pengabdian masyarakat</a>
-                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">Telkom University Surabaya</a>
-                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">virtual reality</a>
+
+                    <!-- Right side content -->
+                    <div class="w-2/3 p-5" style="width: 67%;">
+                        <!-- Date and author info -->
+                        <div class="flex items-center text-sm text-gray-600 mb-3">
+                            <div class="flex items-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>November 25, 2024</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Title with text truncation -->
+                        <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight line-clamp-3 max-h-24 overflow-hidden">
+                            Meningkatkan Pembelajaran SMK dengan Virtual Reality: Inovasi dari Telkom University Surabaya
+                        </h3>
+                        
+                        <!-- Read More link -->
+                        <div class="mt-2">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- News Card 1 -->
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
+                        <div class="h-full w-full overflow-hidden">
+                            <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Right side content -->
+                    <div class="w-2/3 p-5" style="width: 67%;">
+                        <!-- Date and author info -->
+                        <div class="flex items-center text-sm text-gray-600 mb-3">
+                            <div class="flex items-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>November 25, 2024</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Title with text truncation -->
+                        <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight line-clamp-3 max-h-24 overflow-hidden">
+                            Meningkatkan Pembelajaran SMK dengan Virtual Reality: Inovasi dari Telkom University Surabaya
+                        </h3>
+                        
+                        <!-- Read More link -->
+                        <div class="mt-2">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- News Card 1 -->
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
+                        <div class="h-full w-full overflow-hidden">
+                            <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Right side content -->
+                    <div class="w-2/3 p-5" style="width: 67%;">
+                        <!-- Date and author info -->
+                        <div class="flex items-center text-sm text-gray-600 mb-3">
+                            <div class="flex items-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>November 25, 2024</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Title with text truncation -->
+                        <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight line-clamp-3 max-h-24 overflow-hidden">
+                            Meningkatkan Pembelajaran SMK dengan Virtual Reality: Inovasi dari Telkom University Surabaya
+                        </h3>
+                        
+                        <!-- Read More link -->
+                        <div class="mt-2">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- News Card 1 -->
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
+                        <div class="h-full w-full overflow-hidden">
+                            <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Right side content -->
+                    <div class="w-2/3 p-5" style="width: 67%;">
+                        <!-- Date and author info -->
+                        <div class="flex items-center text-sm text-gray-600 mb-3">
+                            <div class="flex items-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>November 25, 2024</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Title with text truncation -->
+                        <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight line-clamp-3 max-h-24 overflow-hidden">
+                            Meningkatkan Pembelajaran SMK dengan Virtual Reality: Inovasi dari Telkom University Surabaya
+                        </h3>
+                        
+                        <!-- Read More link -->
+                        <div class="mt-2">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Sidebar -->
-            <div class="lg:w-1/3 mt-8 lg:mt-0">
+
+            <!-- Right Column - Categories and Banner -->
+            <div class="w-full lg:w-1/3">
                 <!-- Search -->
                 <div class="bg-gray-50 p-6  mb-8">
                     <h2 class="text-xl font-semibold text-gray-900 mb-4">Cari Kegiatan</h2>
                     <div class="flex">
-                        <input type="text" placeholder="Searching..." class="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-red-800">
-                        <button class="bg-red-800 text-white px-4 py-2 rounded-r-lg hover:bg-red-900">
+                        <input type="text" placeholder="Searching..." class="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-[#248232]">
+                        <button class="bg-[#248232] text-white px-4 py-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </button>
                     </div>
                 </div>
-                
-                <!-- Categories -->
-                <div class="bg-gray-50 p-6  mb-8">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Kategori Kegiatan</h2>
-                    <ul>
-                        <li class="mb-2 flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Artikel</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">20</span>
-                        </li>
-                        <li class="mb-2 flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Berita</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">34</span>
-                        </li>
-                        <li class="mb-2 flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Informasi & Agenda</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">22</span>
-                        </li>
-                        <li class="mb-2 flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Kegiatan Riset</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">8</span>
-                        </li>
-                        <li class="mb-2 flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Konferensi</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">1</span>
-                        </li>
-                        <li class="mb-2 flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Prestasi Mahasiswa</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">9</span>
-                        </li>
-                        <li class="mb-2 flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Riset Unggulan</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">5</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <a href="#" class="text-gray-700 hover:text-red-800">Uncategorized</a>
-                            <span class="bg-red-800 text-white text-xs px-2 py-1 ">1</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Latest Articles -->
-                <div class="bg-gray-50 p-6  mb-8">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Kegiatan Terbaru</h2>
-                    <ul>
-                        <li class="mb-4">
-                            <a href="#" class="text-red-800 hover:text-red-900">Jaringan Komputer: Pengertian, Jenis, dan Protokol yang Wajib Diketahui</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="text-red-800 hover:text-red-900">Latihan Menembak Lebih Mudah dengan Game VR Buatan Telkom University Surabaya</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="text-red-800 hover:text-red-900">VPN, Firewall, dan Antivirus, Manakah yang Paling Penting untuk Keamanan Digital?</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="text-red-800 hover:text-red-900">Penerapan Internet of Things (IoT) dalam Kehidupan Sehari-hari</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-red-800 hover:text-red-900">Sejarah dan perkembangan internet awal mula hingga menjadi bagian dari kehidupan yang tak tepisahkan</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Tags Cloud -->
-                <div class="bg-gray-50 p-6 ">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Tags</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">anti virus</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">bisnis</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">cybersecurity</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">dasar jaringan komputer</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">Design Thingking</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">firewall</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">game vr</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">informatika</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">inovasi game vr</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">ITTS</a>
-                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 text-sm  hover:bg-gray-200">jaringan komputer</a>
+                <!-- Categories Box -->
+                <div class="bg-white rounded shadow mb-8">
+                    <div class="bg-gray-800 text-white text-center py-3 font-medium">
+                        Tautan Penting
+                    </div>
+                    <div class="divide-y">
+                        <a href="#" class="block px-4 py-3 hover:bg-gray-50">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Struktur Kurikulum
+                            </div>
+                        </a>
+                        <a href="#" class="block px-4 py-3 hover:bg-gray-50">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Prospek Karir
+                            </div>
+                        </a>
+                        <a href="#" class="block px-4 py-3 hover:bg-gray-50">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Dosen & Staf
+                            </div>
+                        </a>
+                        <a href="#" class="block px-4 py-3 hover:bg-gray-50">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Prestasi & Penghargaan
+                            </div>
+                        </a>
+                        <a href="#" class="block px-4 py-3 hover:bg-gray-50">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Kegiatan Riset
+                            </div>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Student Registration Banner -->
+                {{-- <div class="bg-gray-700 rounded shadow overflow-hidden">
+                    <div class="text-center text-white py-8 px-4">
+                        <h3 class="text-xl font-bold mb-1">Penerimaan</h3>
+                        <h3 class="text-xl font-bold mb-6">Mahasiswa Baru</h3>
+                        
+                        <h2 class="text-2xl font-bold mb-1">Mulai</h2>
+                        <h2 class="text-2xl font-bold mb-1">Perjalanan</h2>
+                        <h2 class="text-2xl font-bold mb-1">Akademis</h2>
+                        <h2 class="text-2xl font-bold mb-1">Kamu</h2>
+                        <h2 class="text-2xl font-bold mb-6">Bersama Kami</h2>
+                        
+                        <a href="#" class="bg-white text-red-800 font-medium px-6 py-2 inline-block rounded hover:bg-gray-100">
+                            Daftar Sekarang
+                        </a>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </div>
-
 </div>
-
 
 

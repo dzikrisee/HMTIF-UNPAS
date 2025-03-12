@@ -14,17 +14,17 @@
 
             <!-- Menu Navigasi -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="{{ route('index') }}" class="text-[#248232] hover:text-[#2D3319] transition-colors">
+                <a href="{{ route('index') }}" class="text-[#248232] font-bold hover:text-[#2D3319] transition-colors">
                     Beranda
                 </a>
-                <a href="/struktur" class="text-[#248232] hover:text-[#2D3319] transition-colors">
+                <a href="/struktur" class="text-[#248232] font-bold hover:text-[#2D3319] transition-colors">
                     Struktur
                 </a>
-                <a href="/divisi" class="text-[#248232] hover:text-[#2D3319] transition-colors">
+                <a href="/divisi" class="text-[#248232] font-bold hover:text-[#2D3319] transition-colors">
                     Divisi
                 </a>
                 <!-- Dropdown Kegiatan -->
-                <div x-data="{ open: false }" class="relative">
+                <div x-data="{ open: false }" class="relative font-bold">
                     <button @click="open = !open" class="text-[#248232] hover:text-[#2D3319] transition-colors flex items-center gap-1">
                         Kegiatan
                         <svg :class="{'rotate-180': open}" class="w-4 h-4 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -35,7 +35,7 @@
                     <!-- Dropdown -->
                     <div x-show="open" @click.away="open = false" x-transition
                         class="absolute left-0 mt-2 w-52 bg-white border border-gray-300 shadow-lg rounded-lg z-10">
-                        <a href="{{ route('kegiatan') }}" class="block px-4 py-3 text-[#248232] hover:bg-gray-100">
+                        <a href="{{ route('proker') }}" class="block px-4 py-3 text-[#248232] hover:bg-gray-100">
                             Program Kerja
                         </a>
                         <a href="{{ route('agenda') }}" class="block px-4 py-3 text-[#248232] hover:bg-gray-100">
@@ -43,6 +43,10 @@
                         </a>
                     </div>
                 </div>
+                <a href="{{ route('pengumuman') }}" class="text-[#248232] font-bold hover:text-[#2D3319] transition-colors">
+                    Pengumuman
+                </a>
+                
 
             </div>
 

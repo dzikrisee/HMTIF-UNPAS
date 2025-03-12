@@ -4,13 +4,13 @@
             <img src="{{ asset('images/Kominfo1.jpg') }}" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-20">
             <div class="absolute inset-0 flex flex-col justify-center items-start">
                 <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 class="text-3xl font-bold text-gray-800 text-left">Judul Program Kerja</h1>
+                    <h1 class="text-3xl font-bold text-gray-800 text-left">Judul Agenda</h1>
                     <nav class="text-gray-600 text-left">
                         <a href="{{ route('index') }}" class="hover:text-gray-800">Home</a> 
                         <span class="mx-2">›</span> 
-                        <a href="/proker" class="hover:text-gray-800">Kegiatan Program Kerja</a> 
+                        <a href="/agenda" class="hover:text-gray-800">Kegiatan Agenda</a> 
                         <span class="mx-2">›</span> 
-                        <span>Judul Program Kerja</span>
+                        <span>Judul Agenda</span>
                     </nav>
                 </div>
             </div>

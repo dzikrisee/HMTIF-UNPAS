@@ -8,9 +8,7 @@
                     <nav class="text-gray-600 text-left">
                         <a href="/" class="hover:text-gray-800">Home</a> 
                         <span class="mx-2">›</span> 
-                        <span>Kegiatan</span>
-                        <span class="mx-2">›</span> 
-                        <span>Program Kerja</span>
+                        <span>Kegiatan Program Kerja</span>
                     </nav>
                 </div>
             </div>
@@ -21,21 +19,22 @@
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Left Column - News Cards -->
             <div class="w-full lg:w-2/3">
+                
                 <!-- News Card 1 -->
-                <div class="bg-white rounded shadow overflow-hidden flex mb-6" style="height: 220px;">
-                    <!-- Left side image container with padding -->
-                    <div class="w-1/3 p-2 pt-2 pl-2 pb-2" style="width: 33%; max-width: 220px;">
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
                         <div class="h-full w-full overflow-hidden">
                             <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
                         </div>
                     </div>
-                    
+
                     <!-- Right side content -->
                     <div class="w-2/3 p-5" style="width: 67%;">
                         <!-- Date and author info -->
                         <div class="flex items-center text-sm text-gray-600 mb-3">
                             <div class="flex items-center mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
                                 <span>November 25, 2024</span>
@@ -45,7 +44,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
-                                <span class="text-red-800 font-medium">kifansa naufal</span>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
                             </div>
                         </div>
                         
@@ -56,7 +55,7 @@
                         
                         <!-- Read More link -->
                         <div class="mt-2">
-                            <a href="" class="text-red-800 text-sm font-medium flex items-center hover:underline">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
                                 Read More
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -66,21 +65,22 @@
                     </div>
                 </div>
 
+
                 <!-- News Card 1 -->
-                <div class="bg-white rounded shadow overflow-hidden flex mb-6" style="height: 220px;">
-                    <!-- Left side image container with padding -->
-                    <div class="w-1/3 p-2 pt-2 pl-2 pb-2" style="width: 33%; max-width: 220px;">
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
                         <div class="h-full w-full overflow-hidden">
                             <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
                         </div>
                     </div>
-                    
+
                     <!-- Right side content -->
                     <div class="w-2/3 p-5" style="width: 67%;">
                         <!-- Date and author info -->
                         <div class="flex items-center text-sm text-gray-600 mb-3">
                             <div class="flex items-center mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
                                 <span>November 25, 2024</span>
@@ -90,7 +90,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
-                                <span class="text-red-800 font-medium">kifansa naufal</span>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
                             </div>
                         </div>
                         
@@ -101,7 +101,7 @@
                         
                         <!-- Read More link -->
                         <div class="mt-2">
-                            <a href="{{ route('detail-proker') }}" class="text-red-800 text-sm font-medium flex items-center hover:underline">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
                                 Read More
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -111,21 +111,22 @@
                     </div>
                 </div>
 
+
                 <!-- News Card 1 -->
-                <div class="bg-white rounded shadow overflow-hidden flex mb-6" style="height: 220px;">
-                    <!-- Left side image container with padding -->
-                    <div class="w-1/3 p-2 pt-2 pl-2 pb-2" style="width: 33%; max-width: 220px;">
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
                         <div class="h-full w-full overflow-hidden">
                             <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
                         </div>
                     </div>
-                    
+
                     <!-- Right side content -->
                     <div class="w-2/3 p-5" style="width: 67%;">
                         <!-- Date and author info -->
                         <div class="flex items-center text-sm text-gray-600 mb-3">
                             <div class="flex items-center mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
                                 <span>November 25, 2024</span>
@@ -135,7 +136,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
-                                <span class="text-red-800 font-medium">kifansa naufal</span>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
                             </div>
                         </div>
                         
@@ -146,7 +147,7 @@
                         
                         <!-- Read More link -->
                         <div class="mt-2">
-                            <a href="#" class="text-red-800 text-sm font-medium flex items-center hover:underline">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
                                 Read More
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -155,10 +156,71 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!-- News Card 1 -->
+                <div class="bg-white border border-gray-300 shadow overflow-hidden flex mb-6 transition-shadow duration-300 hover:shadow-lg" style="height: 220px;">
+                    <!-- Left side image container -->
+                    <div class="w-1/3 p-2" style="width: 33%; max-width: 220px;">
+                        <div class="h-full w-full overflow-hidden">
+                            <img src="{{ asset('images/BPH-Kahim.png') }}" alt="Virtual Reality" class="h-full w-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Right side content -->
+                    <div class="w-2/3 p-5" style="width: 67%;">
+                        <!-- Date and author info -->
+                        <div class="flex items-center text-sm text-gray-600 mb-3">
+                            <div class="flex items-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>November 25, 2024</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span class="text-[#248232] font-medium">DIVISI KOMINFO</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Title with text truncation -->
+                        <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight line-clamp-3 max-h-24 overflow-hidden">
+                            Meningkatkan Pembelajaran SMK dengan Virtual Reality: Inovasi dari Telkom University Surabaya
+                        </h3>
+                        
+                        <!-- Read More link -->
+                        <div class="mt-2">
+                            <a href="{{ route('detail-proker') }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
 
             <!-- Right Column - Categories and Banner -->
             <div class="w-full lg:w-1/3">
+                <!-- Search -->
+                <div class="bg-gray-50 p-6  mb-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Cari Kegiatan</h2>
+                    <div class="flex">
+                        <input type="text" placeholder="Searching..." class="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-[#248232]">
+                        <button class="bg-[#248232] text-white px-4 py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
                 <!-- Categories Box -->
                 <div class="bg-white rounded shadow mb-8">
                     <div class="bg-gray-800 text-white text-center py-3 font-medium">

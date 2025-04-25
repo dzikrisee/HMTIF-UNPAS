@@ -11,7 +11,7 @@ class BPHTugasFungsi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'b_p_h_id',
+        'bph_id',
         'tugas_fungsi',
     ];
 

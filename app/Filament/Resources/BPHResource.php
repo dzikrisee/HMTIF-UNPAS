@@ -66,7 +66,7 @@ class BPHResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('periode')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('foto_profil'),
+            Tables\Columns\ImageColumn::make('foto_profil'),                            
             ])
             ->filters([
                 //

@@ -9,7 +9,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Tentang Kami</h3>
                     <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-white transition-colors">Tentang Organisasi</a></li>
+                        <li><a href="/pengembang" class="text-gray-300 hover:text-white transition-colors">Tentang Pengembang</a></li>
                         <li><a href="/proker" class="text-gray-300 hover:text-white transition-colors">Program Kerja</a></li>
                         <li><a href="/agenda" class="text-gray-300 hover:text-white transition-colors">Agenda</a></li>
                         <li><a href="/pengumuman" class="text-gray-300 hover:text-white transition-colors">Pengumuman</a></li>    

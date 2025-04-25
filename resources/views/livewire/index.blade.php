@@ -400,6 +400,62 @@
         </section>
 
 
+        <!-- Section Form Pertanyaan -->
+        <section class="py-16 px-4 sm:px-8 lg:px-24 bg-white" id="contact-form">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Hubungi <span class="text-[#248232]">Kami</span></h2>
+                <p class="text-gray-600 mb-8">Ada pertanyaan atau saran? Silahkan isi form di bawah ini.</p>
+                
+                <!-- Popup Notifikasi -->
+                <div id="success-notification" class="fixed bottom-4 left-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-md transform transition-all duration-500 translate-y-full opacity-0">
+
+                    <div class="flex items-center">
+                        <div class="py-1">
+                            <svg class="h-6 w-6 text-green-500 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-bold">Pesan Terkirim!</p>
+                            <p class="text-sm">Terima kasih, kami akan segera menghubungi Anda.</p>
+                        </div>
+                        <button onclick="closeNotification()" class="ml-4 text-gray-500 hover:text-gray-700">
+                            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                
+                <form id="contactForm" class="space-y-4" action="https://formspree.io/f/xanonnor" method="POST">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#248232] focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#248232] focus:border-transparent" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subjek</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#248232] focus:border-transparent" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#248232] focus:border-transparent" required></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit" class="bg-[#248232] hover:bg-[#1a6025] text-white font-medium py-2 px-6 rounded-md transition duration-300">Kirim Pesan</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+
 </div>
 
 <script>
@@ -563,4 +619,54 @@
             showTestimonials(currentSlide);
         }, 10000);
     });
+
+
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        // Mencegah default form submission agar kita bisa menangani sendiri
+        event.preventDefault();
+        
+        // Ambil data form
+        const formData = new FormData(this);
+        
+        // Kirim data form ke Formspree
+        fetch('https://formspree.io/f/xanonnor', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Reset form
+                document.getElementById('contactForm').reset();
+                
+                // Tampilkan notifikasi sukses
+                showNotification();
+                
+                // Sembunyikan notifikasi setelah 5 detik
+                setTimeout(closeNotification, 5000);
+            } else {
+                throw new Error('Terjadi kesalahan saat mengirim pesan.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Maaf, terjadi kesalahan. Silakan coba lagi nanti.');
+        });
+    });
+    
+    function showNotification() {
+    const notification = document.getElementById('success-notification');
+    notification.classList.remove('translate-y-full', 'opacity-0');
+    notification.classList.add('translate-y-0', 'opacity-100');
+    }
+
+    function closeNotification() {
+        const notification = document.getElementById('success-notification');
+        notification.classList.remove('translate-y-0', 'opacity-100');
+        notification.classList.add('translate-y-full', 'opacity-0');
+    }
+
 </script>

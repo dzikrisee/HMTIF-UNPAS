@@ -15,6 +15,7 @@ use App\Http\Livewire\Kegiatan\Index as KegiatanIndex;
 use App\Http\Livewire\Struktur\Index as StrukturIndex;
 use App\Livewire\DetailPengumuman;
 use App\Livewire\DetailStruktur;
+use App\Livewire\Pengembang;
 use App\Livewire\Pengumuman;
 
 /*
@@ -35,3 +36,4 @@ Route::get('/detail-divisi/{id}', DetailDivisi::class)->name('detail-divisi');
 Route::get('/detail-struktur/{id}', DetailStruktur::class)->name('detail-struktur');
 Route::get('/pengumuman', Pengumuman::class)->name('pengumuman');
 Route::get('/detail-pengumuman/{id}', DetailPengumuman::class)->name('detail-pengumuman');
+Route::get('/pengembang', Pengembang::class)->name('pengembang');

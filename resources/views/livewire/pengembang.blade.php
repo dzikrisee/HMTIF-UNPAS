@@ -158,6 +158,15 @@
                 <p class="text-gray-500 text-sm">Database</p>
                 </div>
 
+                <!-- Apache Web Server -->
+                <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <div class="h-16 flex items-center justify-center mb-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Apache_HTTP_server_logo_%282019-present%29.svg/720px-Apache_HTTP_server_logo_%282019-present%29.svg.png?20220805205621" alt="">
+                </div>
+                <h3 class="font-semibold text-gray-800">Apache HTTP Server</h3>
+                <p class="text-gray-500 text-sm">Web Server</p>
+                </div>
+
                 <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
                     <div class="h-16 flex items-center justify-center mb-3">
                       <img src="{{ asset('images/livewire.png') }}" alt="Livewire Logo" class="w-12 h-12 object-contain" />

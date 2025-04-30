@@ -92,7 +92,7 @@
                 </div>
                 @empty
                     <div class="col-span-2 text-center py-10">
-                        <p class="text-gray-500">Belum ada data anggota BPH yang tersedia.</p>
+                        <p class="text-gray-500">Belum ada data Program Kerja yang tersedia.</p>
                     </div>
                 @endforelse
                 

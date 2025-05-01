@@ -1,28 +1,14 @@
+@section('title', 'Beranda')
+
 <div>
-
-    <div class="py-16 mt-4">
-        <section class="relative h-screen">
+        <section class="relative mt-[64px] w-full aspect-[16/9] md:aspect-auto md:h-screen overflow-hidden">
             <!-- Hero Background -->
-            <div class="absolute inset-0 z-0">
-                <img src="{{ asset('images/home-background.png') }}" alt="Background" class="w-full h-full object-cover">
-                <div class="absolute inset-0 "></div>
-            </div>
-            
-            <!-- Content -->
-            {{-- <div class="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
-                <h1 class="text-4xl md:text-6xl font-bold text-center mb-2">
-                    HMTIF - Universitas Pasundan
-                </h1>
-                <p class="text-xl text-center text-gray-200">
-                    Excellent in Computing Systems
-                </p>
-            </div> --}}
+            <img src="{{ asset('images/home-background.png') }}"
+                alt="Background"
+                class="absolute inset-0 w-full h-full object-contain md:object-cover object-center z-0" />
         </section>
-    </div>
-        
-
-
-
+    
+    
         <!-- About HMTIF Section -->
         <section class="py-16" id="about">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +41,7 @@
                         </p>
                         
                         <!-- Action Buttons -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 pt-6">
                             <a href="/pengumuman" class="flex items-center gap-3 p-4 border border-[#248232] rounded-lg hover:bg-[#248232]/5 transition-colors group">
                                 <svg class="w-6 h-6 text-[#248232] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -126,9 +112,10 @@
         <!-- Statistik Section -->
         <section class="py-16 mt-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                     <!-- Akreditasi -->
-                    <div class="pr-4 border-r border-gray-300">
+                    <div class="px-4 border-r border-gray-300">
+                
                         <h3 class="text-4xl font-bold text-[#248232] mb-2">0</h3>
                         <p class="text-gray-600">
                             Agenda HMTIF <br> Periode Kabinet Harmoni
@@ -153,8 +140,6 @@
                 </div>
             </div>
         </section>
-
-
 
 
 
@@ -193,48 +178,48 @@
 
         
 
-
         <!-- Section Kegiatan -->
         <section class="py-10 bg-[#F6F6F6]">
             <div class="py-12 px-4 md:px-8 max-w-7xl mx-auto font-sora ">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-900">Kegiatan <span class="text-[#248232]">HMTIF</span></h2>
+                    <div class="mb-3 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Kegiatan <span class="text-[#248232]">HMTIF</span></h2>
                     </div>
-                    <a href="{{ route('proker') }}" class="text-[#248232] hover:text-grey-900 flex items-center">
+                    <a href="{{ route('proker') }}" class="text-[#248232] hover:text-grey-900 flex items-center text-sm md:text-base">
                         Lihat Selengkapnya
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
                     </a>
                 </div>
-    
+
                 <div class="h-px w-full bg-gray-200 mb-10"></div>
-    
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- Grid layout dengan ukuran gap yang disesuaikan untuk mobile -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-1 sm:gap-3 md:gap-4">
                     @forelse($prokers as $proker)
                         <!-- News Card UI Component - With Image Spacing -->
-                        <div class="bg-white rounded shadow overflow-hidden flex">
-                            <!-- Left side image container with padding -->
-                            <div class="w-1/3 p-3 pt-3 pl-3 pb-3">
-                                <div class="h-full w-full overflow-hidden">
+                        <div class="bg-white rounded shadow overflow-hidden flex flex-col sm:flex-row">
+                            <!-- Left side image container - ukuran gambar diperkecil untuk mobile -->
+                            <div class="w-full sm:w-1/3 p-2 sm:p-3">
+                                <div class="h-32 sm:h-full w-full overflow-hidden">
                                     <img src="{{ $proker->gambar_kegiatan ? asset('storage/'.$proker->gambar_kegiatan) : asset('images/BPH-Kahim.png') }}" alt="{{ $proker->judul_kegiatan }}" class="h-full w-full object-cover">
                                 </div>
                             </div>
                             
                             <!-- Right side content -->
-                            <div class="w-2/3 p-5">
+                            <div class="w-full sm:w-2/3 p-3 sm:p-5">
                                 <!-- Date and author info -->
-                                <div class="flex items-center text-sm text-gray-600 mb-3">
-                                    <div class="flex items-center mr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="flex flex-col sm:flex-row sm:items-center text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">
+                                    <div class="flex items-center mr-2 mb-1 sm:mb-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
                                         <span>{{ \Carbon\Carbon::parse($proker->tanggal_kegiatan)->format('F d, Y') }}</span>
                                     </div>
                                     
                                     <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                         </svg>
                                         <span class="text-[#248232] font-medium">{{ $proker->divisi->nama_divisi ?? 'Divisi' }}</span>
@@ -242,15 +227,15 @@
                                 </div>
                                 
                                 <!-- Title -->
-                                <h3 class="font-bold text-gray-900 text-xl mb-4 leading-tight">
-                                    {{ Str::limit($proker->judul_kegiatan, 80) }}
+                                <h3 class="font-bold text-gray-900 text-sm sm:text-base md:text-xl mb-2 sm:mb-4 leading-tight">
+                                    {{ Str::limit($proker->judul_kegiatan, 50, '...') }}
                                 </h3>
                                 
                                 <!-- Read More link -->
-                                <div class="mt-2">
-                                    <a href="{{ route('detail-proker', ['id' => $proker->id]) }}" class="text-[#248232] text-sm font-medium flex items-center hover:underline">
+                                <div class="mt-1 sm:mt-2">
+                                    <a href="{{ route('detail-proker', ['id' => $proker->id]) }}" class="text-[#248232] text-xs sm:text-sm font-medium flex items-center hover:underline">
                                         Read More
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2 sm:h-3 sm:w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                         </svg>
                                     </a>
@@ -265,8 +250,6 @@
                 </div>
             </div>
         </section>
-
-
 
 
 
@@ -311,16 +294,21 @@
 
 
 
-
-
-
         <!-- Section Pengumuman -->
         <section class="w-full bg-[#F6F6F6]">
             <!-- Konten di Tengah -->
             <div class="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-                <div class="flex justify-between items-center mb-8">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
                     <h2 class="text-4xl font-bold text-gray-900">Pengumuman <span class="text-[#248232]">HMTIF</span></h2>
-                    <a href="{{ route('pengumuman') }}" class="text-[#248232] hover:text-gray-600 flex items-center">
+                    <!-- Link hanya tampil di desktop -->
+                    <a href="{{ route('pengumuman') }}" class="hidden md:flex text-[#248232] hover:text-gray-600 items-center">
+                        Lihat Selengkapnya
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <!-- Link tampil di bawah judul hanya di mobile -->
+                    <a href="{{ route('pengumuman') }}" class="md:hidden mt-2 text-[#248232] hover:text-gray-600 flex items-center">
                         Lihat Selengkapnya
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -338,7 +326,7 @@
                         ->get();
                     
                     $pengumumanUtama = $pengumumans->first();
-                    $pengumumanLainnya = $pengumumans->slice(1, 3);
+                    $pengumumanLainnya = $pengumumans->slice(1);
                 @endphp
 
                 @if($pengumumanUtama)
@@ -370,31 +358,92 @@
                 </div>
                 @endif
 
-                <!-- Announcement Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    @foreach($pengumumanLainnya as $pengumuman)
-                    <!-- Announcement Item -->
-                    <div class="bg-white rounded-lg shadow hover:shadow-md transition p-5">
-                        <div class="flex items-center text-gray-500 mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <span>{{ \Carbon\Carbon::parse($pengumuman->tanggal_pengumuman)->format('d F Y') }}</span>
-                            <span class="mx-2">•</span>
-                            <span class="bg-[#248232] text-white text-xs px-2 py-1 rounded ">{{ $pengumuman->kategori }}</span>
+                <!-- Announcement Carousel untuk Mobile dan Grid untuk Desktop -->
+                <div class="relative">
+                    <!-- Mobile Carousel Navigation - hanya tampil di mobile -->
+                    <div class="md:hidden flex justify-between items-center mb-4">
+                        <div class="carousel-counter text-gray-600">
+                            <span class="current-slide">1</span> / <span class="total-slides">{{ count($pengumumanLainnya) }}</span>
                         </div>
-                        <h4 class="font-semibold text-gray-900 hover:text-[#248232] transition mb-3">
-                            <a href="{{ route('detail-pengumuman', $pengumuman->id) }}">{{ $pengumuman->judul }}</a>
-                        </h4>
-                        <p class="text-gray-600 text-sm mb-3">{{ \Illuminate\Support\Str::limit(strip_tags($pengumuman->isi_pengumuman), 100) }}</p>
-                        <a href="{{ route('detail-pengumuman', $pengumuman->id) }}" class="text-[#248232] text-sm hover:underline flex items-center">
-                            Detail Pengumuman
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
+                        <div class="flex space-x-2">
+                            <button class="carousel-prev bg-[#248232] text-white p-2 rounded-full focus:outline-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="carousel-next bg-[#248232] text-white p-2 rounded-full focus:outline-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    @endforeach
+
+                    <!-- Mobile Carousel dan Desktop Grid -->
+                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+                        <!-- Mobile Carousel - hidden on desktop -->
+                        <div class="md:hidden carousel-container overflow-hidden w-full">
+                            <div class="carousel-slides flex w-full transition-transform duration-300 ease-in-out">
+                                @foreach($pengumumanLainnya as $index => $pengumuman)
+                                <div class="carousel-slide w-full flex-shrink-0" data-index="{{ $index }}">
+                                    <div class="bg-white rounded-lg shadow hover:shadow-md transition p-5">
+                                        <div class="flex items-center text-gray-500 mb-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>{{ \Carbon\Carbon::parse($pengumuman->tanggal_pengumuman)->format('d F Y') }}</span>
+                                            <span class="mx-2">•</span>
+                                            <span class="bg-[#248232] text-white text-xs px-2 py-1 rounded">{{ $pengumuman->kategori }}</span>
+                                        </div>
+                                        <h4 class="font-semibold text-gray-900 hover:text-[#248232] transition mb-3">
+                                            <a href="{{ route('detail-pengumuman', $pengumuman->id) }}">{{ $pengumuman->judul }}</a>
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mb-3">{{ \Illuminate\Support\Str::limit(strip_tags($pengumuman->isi_pengumuman), 100) }}</p>
+                                        <a href="{{ route('detail-pengumuman', $pengumuman->id) }}" class="text-[#248232] text-sm hover:underline flex items-center">
+                                            Detail Pengumuman
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <!-- Indicator dots for mobile -->
+                        <div class="flex justify-center mt-4 md:hidden">
+                            @foreach($pengumumanLainnya as $index => $pengumuman)
+                            <span class="carousel-dot h-2 w-2 mx-1 rounded-full cursor-pointer {{ $index == 0 ? 'bg-[#248232]' : 'bg-gray-300' }}" data-index="{{ $index }}"></span>
+                            @endforeach
+                        </div>
+
+                        <!-- Desktop Grid - hidden on mobile -->
+                        @foreach($pengumumanLainnya as $index => $pengumuman)
+                        <div class="hidden md:block">
+                            <div class="bg-white rounded-lg shadow hover:shadow-md transition p-5">
+                                <div class="flex items-center text-gray-500 mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>{{ \Carbon\Carbon::parse($pengumuman->tanggal_pengumuman)->format('d F Y') }}</span>
+                                    <span class="mx-2">•</span>
+                                    <span class="bg-[#248232] text-white text-xs px-2 py-1 rounded">{{ $pengumuman->kategori }}</span>
+                                </div>
+                                <h4 class="font-semibold text-gray-900 hover:text-[#248232] transition mb-3">
+                                    <a href="{{ route('detail-pengumuman', $pengumuman->id) }}">{{ $pengumuman->judul }}</a>
+                                </h4>
+                                <p class="text-gray-600 text-sm mb-3">{{ \Illuminate\Support\Str::limit(strip_tags($pengumuman->isi_pengumuman), 100) }}</p>
+                                <a href="{{ route('detail-pengumuman', $pengumuman->id) }}" class="text-[#248232] text-sm hover:underline flex items-center">
+                                    Detail Pengumuman
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </section>
@@ -453,9 +502,6 @@
                 </form>
             </div>
         </section>
-
-
-
 </div>
 
 <script>
@@ -464,7 +510,6 @@
         const testimonials = [
             [
                 {
-                    
                     text: "Di HMTIF Unpas, saya menemukan keluarga kedua yang mendukung pengembangan diri saya. Kegiatan-kegiatan yang diadakan selalu membuka wawasan baru.",
                     name: "Dzikri Setiawan",
                     role: "Mahasiswa",
@@ -472,7 +517,6 @@
                     location: "Angkatan 2022"
                 },
                 {
-                    
                     text: "HMTIF bukan hanya sekedar himpunan, tapi tempat dimana petualangan bermula. Saya bisa bertemu teman baru dan mengembangkan soft skill.",
                     name: "Rhevindra",
                     role: "Alumni",
@@ -482,7 +526,6 @@
             ],
             [
                 {
-                    
                     text: "Bergabung dengan HMTIF adalah keputusan terbaik selama kuliah. Saya belajar leadership, manajemen proyek, dan keterampilan berkomunikasi.",
                     name: "Fitri Handayani",
                     role: "Mahasiswa",
@@ -490,7 +533,6 @@
                     location: "Angkatan 2023"
                 },
                 {
-                    
                     text: "Pengalaman dalam kepanitiaan IT Competition yang diselenggarakan HMTIF memberikan saya pengalaman berharga dalam mengelola acara berskala nasional.",
                     name: "Dimas Prayoga",
                     role: "Alumni",
@@ -500,7 +542,6 @@
             ],
             [
                 {
-                    
                     text: "HMTIF memberikan platform bagi saya untuk mengembangkan minat di bidang cyber security melalui workshop dan kompetisi rutin yang diadakan.",
                     name: "Muhammad Fauzan",
                     role: "Mahasiswa",
@@ -508,7 +549,6 @@
                     location: "Angkatan 2021"
                 },
                 {
-                    
                     text: "Program mentoring yang diselenggarakan HMTIF sangat membantu saya menghadapi tantangan perkuliahan. Senior-senior selalu siap membantu.",
                     name: "Annisa Putri",
                     role: "Mahasiswa",
@@ -518,6 +558,9 @@
             ]
         ];
 
+        // Data yang diratakan untuk tampilan mobile
+        const flattenedTestimonials = testimonials.flat();
+
         const container = document.getElementById('testimonial-container');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
@@ -525,102 +568,143 @@
         const totalSlidesEl = document.getElementById('total-slides');
 
         let currentSlide = 0;
-        totalSlidesEl.textContent = testimonials.length;
+        let isMobile = window.innerWidth < 768;
 
-        // Fungsi untuk menampilkan testimoni
+        // Function untuk menampilkan testimoni berdasarkan mode tampilan
         function showTestimonials(index) {
             container.innerHTML = '';
-            currentSlideEl.textContent = index + 1;
             
-            testimonials[index].forEach(testimonial => {
-                const card = document.createElement('div');
-                card.className = 'bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-lg h-80 flex flex-col justify-between';
+            if (isMobile) {
+                // Mobile: Tampilkan satu testimoni pada waktu tertentu
+                currentSlideEl.textContent = index + 1;
+                totalSlidesEl.textContent = flattenedTestimonials.length;
                 
-                // Rating stars
-                let stars = '';
-                for (let i = 0; i < testimonial.rating; i++) {
-                    stars += '<span class="text-yellow-500">★</span>';
-                }
+                // Ambil testimoni berdasarkan indeks
+                const testimonial = flattenedTestimonials[index];
                 
-                // Konten utama (akan di-scroll jika terlalu panjang)
-                const mainContent = document.createElement('div');
-                mainContent.className = 'flex flex-col h-full';
-                
-                // Rating stars
-                const ratingDiv = document.createElement('div');
-                ratingDiv.className = 'flex space-x-1 mb-4';
-                ratingDiv.innerHTML = stars;
-                mainContent.appendChild(ratingDiv);
-                
-                // Teks testimoni dengan container yang bisa di-scroll
-                const textDiv = document.createElement('div');
-                textDiv.className = 'flex-grow overflow-y-auto mb-4 pr-2 text-gray-600';
-                textDiv.style.maxHeight = '120px'; // Tinggi maksimum untuk teks
-                textDiv.innerHTML = testimonial.text;
-                mainContent.appendChild(textDiv);
-                
-                // Profile info
-                const profileDiv = document.createElement('div');
-                profileDiv.className = 'flex items-center space-x-4 mt-auto';
-                
-                // Ikon profil yang sesuai tema
-                profileDiv.innerHTML = `
-                    <div class="w-12 h-12 bg-[#1A472A] rounded-full flex items-center justify-center text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800">${testimonial.name} - ${testimonial.role}</h4>
-                        <p class="text-sm text-gray-500">${testimonial.position}<br>${testimonial.location}</p>
-                    </div>
-                `;
-                
-                mainContent.appendChild(profileDiv);
-                card.appendChild(mainContent);
+                // Buat kartu testimoni
+                const card = createTestimonialCard(testimonial);
                 container.appendChild(card);
-            });
-            
-            // Tambahkan custom scrollbar style
-            const style = document.createElement('style');
-            style.textContent = `
-                #testimonial-container .overflow-y-auto::-webkit-scrollbar {
-                    width: 4px;
-                }
-                #testimonial-container .overflow-y-auto::-webkit-scrollbar-track {
-                    background: #f1f1f1;
-                    border-radius: 10px;
-                }
-                #testimonial-container .overflow-y-auto::-webkit-scrollbar-thumb {
-                    background: #1A472A;
-                    border-radius: 10px;
-                }
-            `;
-            document.head.appendChild(style);
+            } else {
+                // Desktop: Tampilkan dua testimoni per slide
+                currentSlideEl.textContent = index + 1;
+                totalSlidesEl.textContent = testimonials.length;
+                
+                // Ambil pasangan testimoni
+                const pair = testimonials[index];
+                
+                // Buat kartu untuk setiap testimoni dalam pasangan
+                pair.forEach(testimonial => {
+                    const card = createTestimonialCard(testimonial);
+                    container.appendChild(card);
+                });
+            }
         }
+
+        // Function untuk membuat kartu testimoni
+        function createTestimonialCard(testimonial) {
+            const card = document.createElement('div');
+            card.className = 'bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-lg h-80 flex flex-col justify-between';
+            
+            // Konten utama
+            const mainContent = document.createElement('div');
+            mainContent.className = 'flex flex-col h-full';
+            
+            // Teks testimoni dengan container yang bisa di-scroll
+            const textDiv = document.createElement('div');
+            textDiv.className = 'flex-grow overflow-y-auto mb-4 pr-2 text-gray-600';
+            textDiv.style.maxHeight = '120px'; // Tinggi maksimum untuk teks
+            textDiv.innerHTML = testimonial.text;
+            mainContent.appendChild(textDiv);
+            
+            // Profile info
+            const profileDiv = document.createElement('div');
+            profileDiv.className = 'flex items-center space-x-4 mt-auto';
+            
+            // Ikon profil
+            profileDiv.innerHTML = `
+                <div class="w-12 h-12 bg-[#1A472A] rounded-full flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800">${testimonial.name} - ${testimonial.role}</h4>
+                    <p class="text-sm text-gray-500">${testimonial.position}<br>${testimonial.location}</p>
+                </div>
+            `;
+            
+            mainContent.appendChild(profileDiv);
+            card.appendChild(mainContent);
+            
+            return card;
+        }
+
+        // Tambahkan custom scrollbar style
+        const style = document.createElement('style');
+        style.textContent = `
+            #testimonial-container .overflow-y-auto::-webkit-scrollbar {
+                width: 4px;
+            }
+            #testimonial-container .overflow-y-auto::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 10px;
+            }
+            #testimonial-container .overflow-y-auto::-webkit-scrollbar-thumb {
+                background: #1A472A;
+                border-radius: 10px;
+            }
+        `;
+        document.head.appendChild(style);
 
         // Event listener untuk tombol navigasi
         prevBtn.addEventListener('click', function() {
-            currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+            if (isMobile) {
+                currentSlide = (currentSlide - 1 + flattenedTestimonials.length) % flattenedTestimonials.length;
+            } else {
+                currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+            }
             showTestimonials(currentSlide);
         });
 
         nextBtn.addEventListener('click', function() {
-            currentSlide = (currentSlide + 1) % testimonials.length;
+            if (isMobile) {
+                currentSlide = (currentSlide + 1) % flattenedTestimonials.length;
+            } else {
+                currentSlide = (currentSlide + 1) % testimonials.length;
+            }
             showTestimonials(currentSlide);
         });
 
+        // Fungsi untuk menangani perubahan ukuran layar
+        function handleResize() {
+            const wasMobile = isMobile;
+            isMobile = window.innerWidth < 768;
+            
+            // Jika mode tampilan berubah, reset current slide dan perbarui tampilan
+            if (wasMobile !== isMobile) {
+                currentSlide = 0;
+                showTestimonials(currentSlide);
+            }
+        }
+
+        // Tambahkan event listener untuk resize
+        window.addEventListener('resize', handleResize);
+
         // Tampilkan testimoni pertama saat halaman dimuat
+        handleResize(); // Deteksi mode tampilan saat ini
         showTestimonials(currentSlide);
         
         // Auto-sliding setiap 10 detik
         setInterval(function() {
-            currentSlide = (currentSlide + 1) % testimonials.length;
+            if (isMobile) {
+                currentSlide = (currentSlide + 1) % flattenedTestimonials.length;
+            } else {
+                currentSlide = (currentSlide + 1) % testimonials.length;
+            }
             showTestimonials(currentSlide);
         }, 10000);
     });
-
-
 
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         // Mencegah default form submission agar kita bisa menangani sendiri
@@ -658,9 +742,9 @@
     });
     
     function showNotification() {
-    const notification = document.getElementById('success-notification');
-    notification.classList.remove('translate-y-full', 'opacity-0');
-    notification.classList.add('translate-y-0', 'opacity-100');
+        const notification = document.getElementById('success-notification');
+        notification.classList.remove('translate-y-full', 'opacity-0');
+        notification.classList.add('translate-y-0', 'opacity-100');
     }
 
     function closeNotification() {
@@ -669,4 +753,106 @@
         notification.classList.add('translate-y-full', 'opacity-0');
     }
 
+
+
+    
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // Carousel initialization
+    const carouselSlides = document.querySelector('.carousel-slides');
+    if (!carouselSlides) return;
+    
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const currentSlideElement = document.querySelector('.current-slide');
+    const totalSlidesElement = document.querySelector('.total-slides');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    // Update total slides count
+    if (totalSlidesElement) {
+        totalSlidesElement.textContent = totalSlides;
+    }
+    
+    // Setup initial slide width
+    slides.forEach(slide => {
+        slide.style.width = '100%';
+    });
+    
+    // Function to update carousel position
+    function updateCarousel() {
+        if (!carouselSlides) return;
+        
+        // Update transform
+        carouselSlides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update current slide indicator
+        if (currentSlideElement) {
+            currentSlideElement.textContent = currentIndex + 1;
+        }
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('bg-[#248232]', index === currentIndex);
+            dot.classList.toggle('bg-gray-300', index !== currentIndex);
+        });
+    }
+    
+    // Event listeners for prev/next buttons
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+            updateCarousel();
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+    }
+    
+    // Dot indicator navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+    
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carouselSlides.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    carouselSlides.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchStartX - touchEndX > swipeThreshold) {
+            // Swipe left - next slide
+            currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        } else if (touchEndX - touchStartX > swipeThreshold) {
+            // Swipe right - previous slide
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+            updateCarousel();
+        }
+    }
+});
+    
 </script>

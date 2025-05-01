@@ -1,3 +1,5 @@
+@section('title', 'Detail Divisi')
+
 <div>
     <!-- Header section remains the same -->
     <section class="py-16">

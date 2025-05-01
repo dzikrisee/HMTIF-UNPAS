@@ -1,3 +1,5 @@
+@section('title', 'Tentang Pengembang')
+
 <div>
     <section class="py-16">
         <div class="relative w-full h-64 bg-gradient-to-r from-gray-50 to-gray-100">
